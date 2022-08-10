@@ -551,10 +551,6 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.fixed {
-  position: fixed;
-}
-
 .absolute {
   position: absolute;
 }
@@ -912,6 +908,11 @@ video {
   background-color: rgb(191 63 63 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#221e1e\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(34 30 30 / var(--tw-bg-opacity));
+}
+
 .bg-\[url\(\'\.\.\/img\/cabor\/sepak_bola\.png\'\)\] {
   background-image: url('../img/cabor/sepak_bola.png');
 }
@@ -926,6 +927,10 @@ video {
 
 .bg-\[url\(\'\.\.\/img\/cabor\/bola_basket\.png\'\)\] {
   background-image: url('../img/cabor/bola_basket.png');
+}
+
+.bg-\[url\(\'public\/img\/cabor\/sepak_bola\.png\'\)\] {
+  background-image: url('public/img/cabor/sepak_bola.png');
 }
 
 .bg-cover {
