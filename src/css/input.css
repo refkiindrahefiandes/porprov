@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background-color: #e5e5e5;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  display: none !important;
+}
+
+.navbar-fixed {
+  @apply fixed z-[9999];
+}
+
+.swiper .title {
+  position: absolute;
+  top: 210px;
+  left: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 12pt;
+  font-family: "Mark Bold" !important;
+}
+
+.hamburger-line {
+  @apply w-[25px] h-[2px] my-[0.4rem] block bg-white;
+}
+
+.hamburger-active > span:nth-child(1) {
+  @apply rotate-45;
+}
+
+.hamburger-active > span:nth-child(2) {
+  @apply scale-0;
+}
+
+.hamburger-active > span:nth-child(3) {
+  @apply -rotate-45;
+}
+
+@media (min-width: 640px) {
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: block !important;
+  }
+}

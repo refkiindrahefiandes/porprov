@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind css -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Swiper css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <!-- Calender -->
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Source+Serif+Pro:wght@700&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <title>PORPROV</title>
+</head>
+<body>
+    <!--Header -->
+    <header id="header" class="top-0 left-0 w-full z-10">
+        <div class="lg:container flex flex-wrap relative">
+            <div class="w-full text-center bg-primary text-white text-sm h-[68px] font-bold leading-[4rem] tracking-widest sm:tracking-[0.425em] sm:text-2xl sm:leading-[4rem]">BASATU NAGORI MAJU</div>
+            
+            <!-- Button -->
+            <button id="hamburger" name="hamburger" type="button" class="block absolute top-[4.5rem] right-4 lg:right-20 xl:hidden z-10 bg-black px-2">
+                <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+            </button>
+
+            <!-- Logo -->
+            <div class="flex flex-wrap absolute justify-center items-center xl:w-[182px] xl:h-[190px] px-4 xl:border xl:border-t-0 xl:border-[#FFC55D] xl:bg-white top-full xl:top-0 xl:ml-[59px] xl:before:content-[''] xl:before:absolute xl:before:bottom-0 xl:before:-right-[3.26rem] xl:before:border-t-0 xl:before:border-r-[3.2rem] xl:before:border-b-[3.2rem] xl:before:border-l-0 xl:before:block border-r-slate-50 xl:before:border-t-transparent xl:before:border-r-transparent xl:before:border-b-[#E4E4E4] xl:before:border-l-[#E4E4E4] xl:before:rotate-90 xl:z-20">
+                <img src="img/logo.png" class="w-[75px] h-[94px] hidden xl:block" alt="logo">
+                <div class="font-roboto font-bold text-sm xl:text-[22px] xl:-mt-10 z-10">
+                    <span class="text-[#3AAF5E]">PORPROV X</span>
+                    <p class="text-[#B5B83D] -mt-2 lg:-mt-0.5">RIAU 2021</p>    
+                    <small class="block text-xs -mt-1 shadow-lg">KUANTAN SINGINGI</small>
+                </div>
+            </div>
+
+            <!-- Navbar -->
+            <nav id="navbar" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[220px] w-full right-16 lg:right-32 top-full sm:max-w-[280px] xl:block xl:static xl:bg-white xl:border xl:border-[#FFC55D] xl:max-w-full xl:shadow-none xl:rounded-none z-10">
+                <ul class="block xl:flex xl:justify-end items-center xl:pr-6">
+                    <li class="group">
+                        <a href="#" class="text-sm font-bold text-dark py-2 mx-8 group-hover:text-secondary xl:uppercase xl:mx-2.5 transition-all duration-200 ease-in-out">Berita</a>
+                    </li> 
+                    <li class="group">
+                        <a href="#" class="text-sm font-bold text-dark py-2 mx-8 group-hover:text-secondary xl:uppercase xl:mx-2.5 transition-all duration-200 ease-in-out">Cabang Olahraga</a>
+                    </li> 
+                    <li class="group">
+                        <a href="#" class="text-sm font-bold text-dark py-2 mx-8 group-hover:text-secondary xl:uppercase xl:mx-2.5 transition-all duration-200 ease-in-out">Jadwal</a>
+                    </li> 
+                    <li class="group">
+                        <a href="#" class="text-sm font-bold text-dark py-2 mx-8 group-hover:text-secondary xl:uppercase xl:mx-2.5 transition-all duration-200 ease-in-out">Hasil</a>
+                    </li>
+                    <li class="group">
+                        <a href="#" class="text-sm font-bold text-dark py-2 mx-8 group-hover:text-secondary xl:uppercase xl:mx-2.5 transition-all duration-200 ease-in-out">Video</a>
+                    </li>
+                    <li class="group">
+                        <a href="#" class="text-sm font-bold text-dark py-2 mx-8 group-hover:text-secondary xl:uppercase xl:mx-2.5 transition-all duration-200 ease-in-out">Venue</a>
+                    </li>
+                    <li class="group">
+                        <a href="#" class="text-sm font-bold text-dark py-2 mx-8 group-hover:text-secondary xl:uppercase xl:mx-2.5 transition-all duration-200 ease-in-out">Maskot</a>
+                    </li>
+                    <li class="group">
+                        <a href="#" class="text-sm font-bold text-dark py-2 mx-8 group-hover:text-secondary xl:uppercase xl:mx-2.5 transition-all duration-200 ease-in-out">Sekretariat</a>
+                    </li>
+                    <li class="group">
+                        <a href="#" class="text-sm font-bold text-dark py-2 mx-8 group-hover:text-secondary xl:uppercase xl:mx-2.5 transition-all duration-200 ease-in-out">Download</a>
+                    </li>
+                    <form action="#" class="flex items-center max-w-[110px] mx-8 xl:mx-0">
+                        <input type="text" name="search" id="search" placeholder="Pencarian" class="px-3 py-1 border-b-[1px] border-[#FFC55D] w-full block text-sm placeholder:text-slate-400 outline-none">
+                        <button class="w-6 h-6 order-first">
+                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 183.792 183.792" style="enable-background:new 0 0 183.792 183.792;" xml:space="preserve">
+                            <path d="M54.734,9.053C39.12,18.067,27.95,32.624,23.284,50.039c-4.667,17.415-2.271,35.606,6.743,51.22
+                            c12.023,20.823,34.441,33.759,58.508,33.759c7.599,0,15.139-1.308,22.287-3.818l30.364,52.592l21.65-12.5l-30.359-52.583
+                            c10.255-8.774,17.638-20.411,21.207-33.73c4.666-17.415,2.27-35.605-6.744-51.22C134.918,12.936,112.499,0,88.433,0
+                            C76.645,0,64.992,3.13,54.734,9.053z M125.29,46.259c5.676,9.831,7.184,21.285,4.246,32.25c-2.938,10.965-9.971,20.13-19.802,25.806
+                            c-6.462,3.731-13.793,5.703-21.199,5.703c-15.163,0-29.286-8.146-36.857-21.259c-5.676-9.831-7.184-21.284-4.245-32.25
+                            c2.938-10.965,9.971-20.13,19.802-25.807C73.696,26.972,81.027,25,88.433,25C103.597,25,117.719,33.146,125.29,46.259z"/>
+                        </div>
+                    </form>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Slider -->
+    <div class="lg:container lg:w-full relative">
+        <div class="swiper">
+            <div class="swiper-container">
+                <div class="grid justify-items-center text-white absolute z-[10] w-full h-full bg-[rgba(0,0,0,0.7)]"> 
+                    <h1 class="flex justify-center items-center mt-8 lg:text-4xl xl:mt-0 font-sourceSerifPr text-sm sm:text-3xl xl:text-5xl tracking-[0.3em] md:tracking-[0.425em]">HITUNG MUNDUR</h1>
+                    <div class="flex justify-around items-center bg-[rgba(0,0,0,0.4)] max-w-[100px] sm:max-w-[250px] md:max-w-2xl px-24">
+                        <span class="block font-sourceSerifPro text-4xl sm:text-6xl xl:text-[200px] tracking-[0.105em] mr-6">22</span>
+                        <h2 class="font-spaceGrotest text-white text-base sm:text-2xl lg:text-3xl xl:text-7xl tracking-[0.3em] xl:tracking-[0.425em] font-bold">HARI</h2>
+                    </div>
+                    <h3 class="flex justify-center items-center font-spaceGrotest text-white text-sm xl:text-5xl tracking-[0.3em] sm:text-3xl md:tracking-[0.425em] font-bold">MENUJU PORPROV X 2021</h3>
+                </div> 
+            </div>
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img class="object-center object-cover w-full h-full" src="./img/slideshow/slide_1.png" alt="slide_1"></div>
+                <div class="swiper-slide"><img class="object-center object-cover w-full h-full" src="./img/slideshow/slide_2.png" alt="slide_2"></div>
+                <div class="swiper-slide"><img class="object-center object-cover w-full h-full" src="./img/slideshow/slide_3.png" alt="slide_3"></div>
+            </div>
+            
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+            
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </div>
+    
+    <!-- Berita -->
+    <section id="berita">
+        <div class="lg:container">
+            <div class="pt-[52px] pb-16 bg-white">
+                <div class="max-w-xl mx-auto text-center mb-8">
+                    <h1 class="font-spaceGrotest font-bold text-lg lg:text-5xl tracking-[0.425em] text-title mb-2">BERITA</h4>  
+                    <hr class="w-[130px] border-2 lg:w-[322px] lg:border-4 border-[#3AAF5E] mx-auto">
+                </div>
+                
+                <div class="flex flex-wrap lg:px-10">
+                    <div class="w-full px-4 sm:w-1/2 xl:w-1/3">
+                        <div class="bg-white overflow-hidden mb-10">
+                            <img src="https://source.unsplash.com/360x200?badminton" alt="sport" class="w-full">
+                            <div class="pt-4 pb-2">
+                                <h3>
+                                    <a href="#" class="font-roboto block mb-3 font-semibold text-dark hover:text-secondary truncate">JUDUL BERITA</a>
+                                </h3>
+                                <p class="font-spaceGrotest font-medium text-base leading-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quaerat omnis vero ratione deserunt asperiores.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full px-4 sm:w-1/2 xl:w-1/3">
+                        <div class="bg-white overflow-hidden mb-10">
+                            <img src="https://source.unsplash.com/360x200?football" alt="sport" class="w-full">
+                            <div class="pt-4 pb-2">
+                                <h3>
+                                    <a href="#" class="font-roboto block mb-3 font-semibold text-dark hover:text-secondary truncate">JUDUL BERITA</a>
+                                </h3>
+                                <p class="font-spaceGrotest font-medium text-base leading-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quaerat omnis vero ratione deserunt asperiores.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full px-4 sm:w-1/2 xl:w-1/3">
+                        <div class="bg-white overflow-hidden mb-10">
+                            <img src="https://source.unsplash.com/360x200?volleyball" alt="sport" class="w-full">
+                            <div class="pt-4 pb-2">
+                                <h3>
+                                    <a href="#" class="font-roboto block mb-3 font-semibold text-dark hover:text-secondary truncate">JUDUL BERITA</a>
+                                </h3>
+                                <p class="font-spaceGrotest font-medium text-base leading-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore quaerat omnis vero ratione deserunt asperiores.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video -->
+    <section id="video">
+        <div class="lg:container">
+            <div class="pt-[52px] pb-16 bg-[#282828] px-4">
+                <div class="max-w-xl mx-auto text-center mb-8">
+                    <h1 class="font-spaceGroteszzt font-bold text-lg lg:text-5xl tracking-[0.425em] text-title mb-2">VIDEO</h4>  
+                    <hr class="w-[130px] border-2 lg:w-[322px] lg:border-4 border-[#3AAF5E] mx-auto">
+                </div>
+                <div class="flex flex-wrap justify-evenly">
+                    <div class="w-full md:max-w-xl mb-8">
+                        <video src="video/video_1.mp4" class="w-full md:w-[600px] md:h-[400px]" poster="img/venue/venue_1.jpg" controls controllist="nodownload"></video>
+                        <div class="py-2 bg-[#2ECC71]">
+                            <p class="font-spaceGrotest font-medium text-base leading-5 px-2 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap justify-evenly lg:lg:max-w-xl xl:max-w-md">
+                        <div class="w-full md:max-w-xl mb-8">
+                            <video src="video/video_2.mp4" class="md:w-[600px] md:h-[400px] xl:w-[500px] xl:h-[150px]" poster="img/venue/venue_2.jpg" controls controllist="nodownload"></video>
+                            <div class="py-2 bg-[#2ECC71]">
+                                <p class="font-spaceGrotest font-medium text-base leading-5 px-2 text-white">Lorem ipsum dolor sit amet consectetur</p>
+                            </div>
+                        </div>
+                        <div class="w-full md:max-w-xl">
+                            <video src="video/video_3.mp4" class="md:w-[600px] md:h-[400px] xl:w-[500px] xl:h-[150px]" poster="img/venue/venue_3.jpg" controls controllist="nodownload"></video>
+                            <div class="py-2 bg-[#2ECC71]">
+                                <p class="font-spaceGrotest font-medium text-base leading-5 px-2 text-white">Lorem ipsum dolor sit amet consectetur</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Cabang Olahraga -->
+    <section id="cabor">
+        <div class="lg:container">
+            <div class="pt-[52px] pb-16 bg-white">
+                <div class="w-full mx-auto text-center mb-8">
+                    <h1 class="font-spaceGrotest font-bold text-lg lg:text-5xl tracking-[0.425em] text-title mb-2">CABANG OLAHRAGA</h4>  
+                    <hr class="w-[130px] border-2 lg:w-[322px] 
+                    lg:border-4 border-[#3AAF5E] mx-auto">
+                </div>
+                
+                <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 xl:grid-cols-9 justify-items-center content-center px-12">
+                    <div class="md:mb-12">
+                        <div class="w-[106px] h-[106px] bg-[#C4C4C4] group cursor-pointer overflow-hidden mb-2">
+                            <div class="w-full h-full bg-[url('../img/cabor/sepak_bola.png')] bg-cover bg-center group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500"></div>
+                        </div>
+                        <p class="text-center font-semibold text-base lg:uppercase">Sepak Bola</p>
+                    </div>
+                    <div class="md:mb-12">
+                        <div class="w-[106px] h-[106px] bg-[#C4C4C4] group cursor-pointer overflow-hidden mb-2">
+                            <div class="w-full h-full bg-[url('../img/cabor/bola_volly.png')] bg-cover bg-center group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500"></div>
+                        </div>
+                        <p class="text-center font-semibold text-base lg:uppercase">Bola Volly</p>
+                    </div>
+                    <div class="md:mb-12">
+                        <div class="w-[106px] h-[106px] bg-[#C4C4C4] group cursor-pointer overflow-hidden mb-2">
+                            <div class="w-full h-full bg-[url('../img/cabor/badminton.png')] bg-cover bg-center group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500"></div>
+                        </div>
+                        <p class="text-center font-semibold text-base lg:uppercase">Badminton</p>
+                    </div>
+                    <div class="md:mb-12">
+                        <div class="w-[106px] h-[106px] bg-[#C4C4C4] group cursor-pointer overflow-hidden mb-2">
+                            <div class="w-full h-full bg-[url('../img/cabor/bola_basket.png')] bg-cover bg-center group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500"></div>
+                        </div>
+                        <p class="text-center font-semibold text-base lg:uppercase">Bola basket</p>
+                    </div>
+                    <div class="md:mb-12">
+                        <div class="w-[106px] h-[106px] bg-[#C4C4C4] group cursor-pointer overflow-hidden mb-2">
+                            <div class="w-full h-full bg-[url('../img/cabor/sepak_bola.png')] bg-cover bg-center group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500"></div>
+                        </div>
+                        <p class="text-center font-semibold text-base lg:uppercase">Sepak Bola</p>
+                    </div>
+                    <div class="md:mb-12">
+                        <div class="w-[106px] h-[106px] bg-[#C4C4C4] group cursor-pointer overflow-hidden mb-2">
+                            <div class="w-full h-full bg-[url('../img/cabor/bola_volly.png')] bg-cover bg-center group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500"></div>
+                        </div>
+                        <p class="text-center font-semibold text-base lg:uppercase">Bola Volly</p>
+                    </div>
+                    <div class="md:mb-12">
+                        <div class="w-[106px] h-[106px] bg-[#C4C4C4] group cursor-pointer overflow-hidden mb-2">
+                            <div class="w-full h-full bg-[url('../img/cabor/badminton.png')] bg-cover bg-center group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500"></div>
+                        </div>
+                        <p class="text-center font-semibold text-base lg:uppercase">Badminton</p>
+                    </div>
+                    <div class="md:mb-12">
+                        <div class="w-[106px] h-[106px] bg-[#C4C4C4] group cursor-pointer overflow-hidden mb-2">
+                            <div class="w-full h-full bg-[url('../img/cabor/bola_basket.png')] bg-cover bg-center group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500"></div>
+                        </div>
+                        <p class="text-center font-semibold text-base lg:uppercase">Bola basket</p>
+                    </div>
+                    <div class="md:mb-12">
+                        <div class="w-[106px] h-[106px] bg-[#C4C4C4] group cursor-pointer overflow-hidden mb-2">
+                            <div class="w-full h-full bg-[url('../img/cabor/sepak_bola.png')] bg-cover bg-center group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500"></div>
+                        </div>
+                        <p class="text-center font-semibold text-base lg:uppercase">Sepak Bola</p>
+                    </div>
+                    <div class="md:mb-12">
+                        <div class="w-[106px] h-[106px] bg-[#C4C4C4] group cursor-pointer overflow-hidden mb-2">
+                            <div class="w-full h-full bg-[url('../img/cabor/bola_volly.png')] bg-cover bg-center group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500"></div>
+                        </div>
+                        <p class="text-center font-semibold text-base lg:uppercase">Bola Volly</p>
+                    </div>
+                    <div class="md:mb-12">
+                        <div class="w-[106px] h-[106px] bg-[#C4C4C4] group cursor-pointer overflow-hidden mb-2">
+                            <div class="w-full h-full bg-[url('../img/cabor/badminton.png')] bg-cover bg-center group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500"></div>
+                        </div>
+                        <p class="text-center font-semibold text-base lg:uppercase">Badminton</p>
+                    </div>
+                    <div class="md:mb-12">
+                        <div class="w-[106px] h-[106px] bg-[#C4C4C4] group cursor-pointer overflow-hidden mb-2">
+                            <div class="w-full h-full bg-[url('../img/cabor/bola_basket.png')] bg-cover bg-center group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500"></div>
+                        </div>
+                        <p class="text-center font-semibold text-base lg:uppercase">Bola basket</p>
+                    </div>
+                    <div class="md:mb-12">
+                        <div class="w-[106px] h-[106px] bg-[#C4C4C4] group cursor-pointer overflow-hidden mb-2">
+                            <div class="w-full h-full bg-[url('../img/cabor/sepak_bola.png')] bg-cover bg-center group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500"></div>
+                        </div>
+                        <p class="text-center font-semibold text-base lg:uppercase">Sepak Bola</p>
+                    </div>
+                    <div class="md:mb-12">
+                        <div class="w-[106px] h-[106px] bg-[#C4C4C4] group cursor-pointer overflow-hidden mb-2">
+                            <div class="w-full h-full bg-[url('../img/cabor/bola_volly.png')] bg-cover bg-center group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500"></div>
+                        </div>
+                        <p class="text-center font-semibold text-base lg:uppercase">Bola Volly</p>
+                    </div>
+                    <div class="md:mb-12">
+                        <div class="w-[106px] h-[106px] bg-[#C4C4C4] group cursor-pointer overflow-hidden mb-2">
+                            <div class="w-full h-full bg-[url('../img/cabor/badminton.png')] bg-cover bg-center group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500"></div>
+                        </div>
+                        <p class="text-center font-semibold text-base lg:uppercase">Badminton</p>
+                    </div>
+                    <div class="md:mb-12">
+                        <div class="w-[106px] h-[106px] bg-[#C4C4C4] group cursor-pointer overflow-hidden mb-2">
+                            <div class="w-full h-full bg-[url('../img/cabor/bola_basket.png')] bg-cover bg-center group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500"></div>
+                        </div>
+                        <p class="text-center font-semibold text-base lg:uppercase">Bola basket</p>
+                    </div>
+                    <div class="md:mb-12">
+                        <div class="w-[106px] h-[106px] bg-[#C4C4C4] group cursor-pointer overflow-hidden mb-2">
+                            <div class="w-full h-full bg-[url('../img/cabor/sepak_bola.png')] bg-cover bg-center group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500"></div>
+                        </div>
+                        <p class="text-center font-semibold text-base lg:uppercase">Sepak Bola</p>
+                    </div>
+                    <div class="md:mb-12">
+                        <div class="w-[106px] h-[106px] bg-[#C4C4C4] group cursor-pointer overflow-hidden mb-2">
+                            <div class="w-full h-full bg-[url('../img/cabor/bola_volly.png')] bg-cover bg-center group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500"></div>
+                        </div>
+                        <p class="text-center font-semibold text-base lg:uppercase">Bola Volly</p>
+                    </div>
+                    <div class="md:mb-12">
+                        <div class="w-[106px] h-[106px] bg-[#C4C4C4] group cursor-pointer overflow-hidden mb-2">
+                            <div class="w-full h-full bg-[url('../img/cabor/badminton.png')] bg-cover bg-center group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500"></div>
+                        </div>
+                        <p class="text-center font-semibold text-base lg:uppercase">Badminton</p>
+                    </div>
+                    <div class="md:mb-12">
+                        <div class="w-[106px] h-[106px] bg-[#C4C4C4] group cursor-pointer overflow-hidden mb-2">
+                            <div class="w-full h-full bg-[url('../img/cabor/bola_basket.png')] bg-cover bg-center group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500"></div>
+                        </div>
+                        <p class="text-center font-semibold text-base lg:uppercase">Bola basket</p>
+                    </div>
+                    <div class="md:mb-12">
+                        <div class="w-[106px] h-[106px] bg-[#C4C4C4] group cursor-pointer overflow-hidden mb-2">
+                            <div class="w-full h-full bg-[url('../img/cabor/sepak_bola.png')] bg-cover bg-center group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500"></div>
+                        </div>
+                        <p class="text-center font-semibold text-base lg:uppercase">Sepak Bola</p>
+                    </div>
+                    <div class="md:mb-12">
+                        <div class="w-[106px] h-[106px] bg-[#C4C4C4] group cursor-pointer overflow-hidden mb-2">
+                            <div class="w-full h-full bg-[url('../img/cabor/bola_volly.png')] bg-cover bg-center group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500"></div>
+                        </div>
+                        <p class="text-center font-semibold text-base lg:uppercase">Bola Volly</p>
+                    </div>
+                    <div class="md:mb-12">
+                        <div class="w-[106px] h-[106px] bg-[#C4C4C4] group cursor-pointer overflow-hidden mb-2">
+                            <div class="w-full h-full bg-[url('../img/cabor/badminton.png')] bg-cover bg-center group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500"></div>
+                        </div>
+                        <p class="text-center font-semibold text-base lg:uppercase">Badminton</p>
+                    </div>
+                    <div class="md:mb-12">
+                        <div class="w-[106px] h-[106px] bg-[#C4C4C4] group cursor-pointer overflow-hidden mb-2">
+                            <div class="w-full h-full bg-[url('../img/cabor/bola_basket.png')] bg-cover bg-center group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500"></div>
+                        </div>
+                        <p class="text-center font-semibold text-base lg:uppercase">Bola basket</p>
+                    </div>
+                    <div class="md:mb-12">
+                        <div class="w-[106px] h-[106px] bg-[#C4C4C4] group cursor-pointer overflow-hidden mb-2">
+                            <div class="w-full h-full bg-[url('../img/cabor/sepak_bola.png')] bg-cover bg-center group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500"></div>
+                        </div>
+                        <p class="text-center font-semibold text-base lg:uppercase">Sepak Bola</p>
+                    </div>
+                    <div class="md:mb-12">
+                        <div class="w-[106px] h-[106px] bg-[#C4C4C4] group cursor-pointer overflow-hidden mb-2">
+                            <div class="w-full h-full bg-[url('../img/cabor/bola_volly.png')] bg-cover bg-center group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500"></div>
+                        </div>
+                        <p class="text-center font-semibold text-base lg:uppercase">Bola Volly</p>
+                    </div>
+                    <div class="md:mb-12">
+                        <div class="w-[106px] h-[106px] bg-[#C4C4C4] group cursor-pointer overflow-hidden mb-2">
+                            <div class="w-full h-full bg-[url('../img/cabor/badminton.png')] bg-cover bg-center group-hover:scale-125 group-hover:-rotate-12 transition-all duration-500"></div>
+                        </div>
+                        <p class="text-center font-semibold text-base lg:uppercase">Badminton</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Jadwal -->
+    <section id="jadwal">
+        <div class="lg:container">
+            <div class="pt-[52px] pb-16 bg-[#282828] text-white">
+                <div class="max-w-xl mx-auto text-center mb-8">
+                    <h1 class="font-spaceGroteszzt font-bold text-lg lg:text-5xl tracking-[0.425em] text-title mb-2">JADWAL</h1>  
+                    <hr class="w-[130px] border-2 lg:w-[322px] lg:border-4 border-[#3AAF5E] mx-auto">
+                    <h3 class="font-bold text-sm lg:text-[38px] tracking-[0.075em] my-6 lg:my-[45px]">NOVEMBER 2022</h3>
+                </div>
+
+                <div class="grid grid-cols-4 sm:grid-cols-7 justify-items-center content-center px-12 lg:px-36 text-[26px] text-[rgba(255, 255, 255, 0.54)] font-bold ">
+                    <div class="md:mb-12">
+                        <div class="flex justify-center items-center w-[44px] h-[44px] mb-2">
+                            30
+                        </div>
+                    </div>
+                    <div class="md:mb-12">
+                        <div class="flex justify-center items-center w-[44px] h-[44px] mb-2">
+                            31
+                        </div>
+                    </div>
+                    <div class="md:mb-12 relative group">
+                        <div class="flex justify-center items-center text-[rgba(255, 255, 255, 0.54)]  w-[44px] h-[44px] rounded-tl-lg rounded-br-lg leading-2 bg-[#BF3F3F] cursor-pointer mb-2 group-hover:bg-secondary">
+                            1
+                        </div>
+                        <span class="absolute hidden text-xs text-black bg-white px-2 py-2  rounded-tl-lg rounded-br-3xl group-hover:block z-10">Pertandingan Cabor</span>
+                    </div>
+                    <div class="md:mb-12 relative group">
+                        <div class="flex justify-center items-center text-[rgba(255, 255, 255, 0.54)]  w-[44px] h-[44px] rounded-tl-lg rounded-br-lg leading-2 bg-[#BF3F3F] cursor-pointer mb-2 group-hover:bg-secondary">
+                            2
+                        </div>
+                        <span class="absolute hidden text-xs text-black bg-white px-2 py-2  rounded-tl-lg rounded-br-3xl group-hover:block z-10">Pertandingan Cabor</span>
+                    </div>
+                    <div class="md:mb-12 relative group">
+                        <div class="flex justify-center items-center text-[rgba(255, 255, 255, 0.54)]  w-[44px] h-[44px] rounded-tl-lg rounded-br-lg leading-2 bg-[#BF3F3F] cursor-pointer mb-2 group-hover:bg-secondary">
+                            3
+                        </div>
+                        <span class="absolute hidden text-xs text-black bg-white px-2 py-2  rounded-tl-lg rounded-br-3xl group-hover:block z-10">Pertandingan Cabor</span>
+                    </div>
+                    <div class="md:mb-12 relative group">
+                        <div class="flex justify-center items-center text-[rgba(255, 255, 255, 0.54)]  w-[44px] h-[44px] rounded-tl-lg rounded-br-lg leading-2 bg-[#BF3F3F] cursor-pointer mb-2 group-hover:bg-secondary">
+                            4
+                        </div>
+                        <span class="absolute hidden text-xs text-black bg-white px-2 py-2  rounded-tl-lg rounded-br-3xl group-hover:block z-10">Pertandingan Cabor</span>
+                    </div>
+                    <div class="md:mb-12 relative group">
+                        <div class="flex justify-center items-center text-[rgba(255, 255, 255, 0.54)]  w-[44px] h-[44px] rounded-tl-lg rounded-br-lg leading-2 bg-[#BF3F3F] cursor-pointer mb-2 group-hover:bg-secondary">
+                            5
+                        </div>
+                        <span class="absolute hidden text-xs text-black bg-white px-2 py-2  rounded-tl-lg rounded-br-3xl group-hover:block z-10">Pertandingan Cabor</span>
+                    </div>
+                    <div class="md:mb-12 relative group">
+                        <div class="flex justify-center items-center text-[rgba(255, 255, 255, 0.54)]  w-[44px] h-[44px] rounded-tl-lg rounded-br-lg leading-2 bg-[#BF3F3F] cursor-pointer mb-2 group-hover:bg-secondary">
+                            6
+                        </div>
+                        <span class="absolute hidden text-xs text-black bg-white px-2 py-2  rounded-tl-lg rounded-br-3xl group-hover:block z-10">Pertandingan Cabor</span>
+                    </div>
+                    <div class="md:mb-12 relative group">
+                        <div class="flex justify-center items-center text-[rgba(255, 255, 255, 0.54)]  w-[44px] h-[44px] rounded-tl-lg rounded-br-lg leading-2 bg-[#BF3F3F] cursor-pointer mb-2 group-hover:bg-secondary">
+                            7
+                        </div>
+                        <span class="absolute hidden text-xs text-black bg-white px-2 py-2  rounded-tl-lg rounded-br-3xl group-hover:block z-10">Pertandingan Cabor</span>
+                    </div>
+                    <div class="md:mb-12 relative group">
+                        <div class="flex justify-center items-center text-[rgba(255, 255, 255, 0.54)]  w-[44px] h-[44px] rounded-tl-lg rounded-br-lg leading-2 bg-[#BF3F3F] cursor-pointer mb-2 group-hover:bg-secondary">
+                            8
+                        </div>
+                        <span class="absolute hidden text-xs text-black bg-white px-2 py-2  rounded-tl-lg rounded-br-3xl group-hover:block z-10">Pertandingan Cabor</span>
+                    </div>
+                    <div class="md:mb-12 relative group">
+                        <div class="flex justify-center items-center text-[rgba(255, 255, 255, 0.54)]  w-[44px] h-[44px] rounded-tl-lg rounded-br-lg leading-2 bg-[#BF3F3F] cursor-pointer mb-2 group-hover:bg-secondary">
+                            9
+                        </div>
+                        <span class="absolute hidden text-xs text-black bg-white px-2 py-2  rounded-tl-lg rounded-br-3xl group-hover:block z-10">Pertandingan Cabor</span>
+                    </div>
+                    <div class="md:mb-12 relative group">
+                        <div class="flex justify-center items-center text-[rgba(255, 255, 255, 0.54)]  w-[44px] h-[44px] rounded-tl-lg rounded-br-lg leading-2 bg-[#BF3F3F] cursor-pointer mb-2 group-hover:bg-secondary">
+                            10
+                        </div>
+                        <span class="absolute hidden text-xs text-black bg-white px-2 py-2  rounded-tl-lg rounded-br-3xl group-hover:block z-10">Pertandingan Cabor</span>
+                    </div>
+                    <div class="md:mb-12 relative group">
+                        <div class="flex justify-center items-center text-[rgba(255, 255, 255, 0.54)]  w-[44px] h-[44px] rounded-tl-lg rounded-br-lg leading-2 bg-[#BF3F3F] cursor-pointer mb-2 group-hover:bg-secondary">
+                            11
+                        </div>
+                        <span class="absolute hidden text-xs text-black bg-white px-2 py-2  rounded-tl-lg rounded-br-3xl group-hover:block z-10">Pertandingan Cabor</span>
+                    </div>
+                    <div class="md:mb-12 relative group">
+                        <div class="flex justify-center items-center text-[rgba(255, 255, 255, 0.54)]  w-[44px] h-[44px] rounded-tl-lg rounded-br-lg leading-2 bg-[#BF3F3F] cursor-pointer mb-2 group-hover:bg-secondary">
+                            12
+                        </div>
+                        <span class="absolute hidden text-xs text-black bg-white px-2 py-2  rounded-tl-lg rounded-br-3xl group-hover:block z-10">Pertandingan Cabor</span>
+                    </div>
+                    <div class="md:mb-12 relative group">
+                        <div class="flex justify-center items-center text-[rgba(255, 255, 255, 0.54)]  w-[44px] h-[44px] rounded-tl-lg rounded-br-lg leading-2 bg-[#BF3F3F] cursor-pointer mb-2 group-hover:bg-secondary">
+                            13
+                        </div>
+                        <span class="absolute hidden text-xs text-black bg-white px-2 py-2  rounded-tl-lg rounded-br-3xl group-hover:block z-10">Pertandingan Cabor</span>
+                    </div>
+                    <div class="md:mb-12 relative group">
+                        <div class="flex justify-center items-center text-[rgba(255, 255, 255, 0.54)]  w-[44px] h-[44px] rounded-tl-lg rounded-br-lg leading-2 bg-[#BF3F3F] cursor-pointer mb-2 group-hover:bg-secondary">
+                            14
+                        </div>
+                        <span class="absolute hidden text-xs text-black bg-white px-2 py-2  rounded-tl-lg rounded-br-3xl group-hover:block z-10">Pertandingan Cabor</span>
+                    </div>
+                    <div class="md:mb-12 relative group">
+                        <div class="flex justify-center items-center text-[rgba(255, 255, 255, 0.54)]  w-[44px] h-[44px] rounded-tl-lg rounded-br-lg leading-2 bg-[#BF3F3F] cursor-pointer mb-2 group-hover:bg-secondary">
+                            15
+                        </div>
+                        <span class="absolute hidden text-xs text-black bg-white px-2 py-2  rounded-tl-lg rounded-br-3xl group-hover:block z-10">Pertandingan Cabor</span>
+                    </div>
+                    <div class="md:mb-12 relative group">
+                        <div class="flex justify-center items-center text-[rgba(255, 255, 255, 0.54)]  w-[44px] h-[44px] rounded-tl-lg rounded-br-lg leading-2 bg-[#BF3F3F] cursor-pointer mb-2 group-hover:bg-secondary">
+                            16
+                        </div>
+                        <span class="absolute hidden text-xs text-black bg-white px-2 py-2  rounded-tl-lg rounded-br-3xl group-hover:block z-10">Pertandingan Cabor</span>
+                    </div>
+                    <div class="md:mb-12 relative group">
+                        <div class="flex justify-center items-center text-[rgba(255, 255, 255, 0.54)]  w-[44px] h-[44px] rounded-tl-lg rounded-br-lg leading-2 bg-[#BF3F3F] cursor-pointer mb-2 group-hover:bg-secondary">
+                            17
+                        </div>
+                        <span class="absolute hidden text-xs text-black bg-white px-2 py-2  rounded-tl-lg rounded-br-3xl group-hover:block z-10">Pertandingan Cabor</span>
+                    </div>
+                    <div class="md:mb-12 relative group">
+                        <div class="flex justify-center items-center text-[rgba(255, 255, 255, 0.54)]  w-[44px] h-[44px] rounded-tl-lg rounded-br-lg leading-2 bg-[#BF3F3F] cursor-pointer mb-2 group-hover:bg-secondary">
+                            18
+                        </div>
+                        <span class="absolute hidden text-xs text-black bg-white px-2 py-2  rounded-tl-lg rounded-br-3xl group-hover:block z-10">Pertandingan Cabor</span>
+                    </div>
+                    <div class="md:mb-12 relative group">
+                        <div class="flex justify-center items-center text-[rgba(255, 255, 255, 0.54)]  w-[44px] h-[44px] rounded-tl-lg rounded-br-lg leading-2 bg-[#BF3F3F] cursor-pointer mb-2 group-hover:bg-secondary">
+                            19
+                        </div>
+                        <span class="absolute hidden text-xs text-black bg-white px-2 py-2  rounded-tl-lg rounded-br-3xl group-hover:block z-10">Pertandingan Cabor</span>
+                    </div>
+                    <div class="md:mb-12 relative group">
+                        <div class="flex justify-center items-center text-[rgba(255, 255, 255, 0.54)]  w-[44px] h-[44px] rounded-tl-lg rounded-br-lg leading-2 bg-[#BF3F3F] cursor-pointer mb-2 group-hover:bg-secondary">
+                            20
+                        </div>
+                        <span class="absolute hidden text-xs text-black bg-white px-2 py-2  rounded-tl-lg rounded-br-3xl group-hover:block z-10">Pertandingan Cabor</span>
+                    </div>
+                    <div class="md:mb-12 relative group">
+                        <div class="flex justify-center items-center text-[rgba(255, 255, 255, 0.54)]  w-[44px] h-[44px] rounded-tl-lg rounded-br-lg leading-2 bg-[#BF3F3F] cursor-pointer mb-2 group-hover:bg-secondary">
+                            21
+                        </div>
+                        <span class="absolute hidden text-xs text-black bg-white px-2 py-2  rounded-tl-lg rounded-br-3xl group-hover:block z-10">Pertandingan Cabor</span>
+                    </div>
+                    <div class="md:mb-12 relative group">
+                        <div class="flex justify-center items-center text-[rgba(255, 255, 255, 0.54)]  w-[44px] h-[44px] rounded-tl-lg rounded-br-lg leading-2 bg-[#BF3F3F] cursor-pointer mb-2 group-hover:bg-secondary">
+                            22
+                        </div>
+                        <span class="absolute hidden text-xs text-black bg-white px-2 py-2  rounded-tl-lg rounded-br-3xl group-hover:block z-10">Pertandingan Cabor</span>
+                    </div>
+                    <div class="md:mb-12 relative group">
+                        <div class="flex justify-center items-center text-[rgba(255, 255, 255, 0.54)]  w-[44px] h-[44px] rounded-tl-lg rounded-br-lg leading-2 bg-[#BF3F3F] cursor-pointer mb-2 group-hover:bg-secondary">
+                            23
+                        </div>
+                        <span class="absolute hidden text-xs text-black bg-white px-2 py-2  rounded-tl-lg rounded-br-3xl group-hover:block z-10">Pertandingan Cabor</span>
+                    </div>
+                    <div class="md:mb-12 relative group">
+                        <div class="flex justify-center items-center text-[rgba(255, 255, 255, 0.54)]  w-[44px] h-[44px] rounded-tl-lg rounded-br-lg leading-2 bg-[#BF3F3F] cursor-pointer mb-2 group-hover:bg-secondary">
+                            24
+                        </div>
+                        <span class="absolute hidden text-xs text-black bg-white px-2 py-2  rounded-tl-lg rounded-br-3xl group-hover:block z-10">Pertandingan Cabor</span>
+                    </div>
+                    <div class="md:mb-12 relative group">
+                        <div class="flex justify-center items-center text-[rgba(255, 255, 255, 0.54)]  w-[44px] h-[44px] rounded-tl-lg rounded-br-lg leading-2 bg-[#BF3F3F] cursor-pointer mb-2 group-hover:bg-secondary">
+                            25
+                        </div>
+                        <span class="absolute hidden text-xs text-black bg-white px-2 py-2  rounded-tl-lg rounded-br-3xl group-hover:block z-10">Pertandingan Cabor</span>
+                    </div>
+                    <div class="md:mb-12 relative group">
+                        <div class="flex justify-center items-center text-[rgba(255, 255, 255, 0.54)]  w-[44px] h-[44px] rounded-tl-lg rounded-br-lg leading-2 bg-[#BF3F3F] cursor-pointer mb-2 group-hover:bg-secondary">
+                            26
+                        </div>
+                        <span class="absolute hidden text-xs text-black bg-white px-2 py-2  rounded-tl-lg rounded-br-3xl group-hover:block z-10">Pertandingan Cabor</span>
+                    </div>
+                    <div class="md:mb-12 relative group">
+                        <div class="flex justify-center items-center text-[rgba(255, 255, 255, 0.54)]  w-[44px] h-[44px] rounded-tl-lg rounded-br-lg leading-2 bg-[#BF3F3F] cursor-pointer mb-2 group-hover:bg-secondary">
+                            27
+                        </div>
+                        <span class="absolute hidden text-xs text-black bg-white px-2 py-2  rounded-tl-lg rounded-br-3xl group-hover:block z-10">Pertandingan Cabor</span>
+                    </div>
+                    <div class="md:mb-12 relative group">
+                        <div class="flex justify-center items-center text-[rgba(255, 255, 255, 0.54)]  w-[44px] h-[44px] rounded-tl-lg rounded-br-lg leading-2 bg-[#BF3F3F] cursor-pointer mb-2 group-hover:bg-secondary">
+                            28
+                        </div>
+                        <span class="absolute hidden text-xs text-black bg-white px-2 py-2  rounded-tl-lg rounded-br-3xl group-hover:block z-10">Pertandingan Cabor</span>
+                    </div>
+                    <div class="md:mb-12 relative group">
+                        <div class="flex justify-center items-center text-[rgba(255, 255, 255, 0.54)]  w-[44px] h-[44px] rounded-tl-lg rounded-br-lg leading-2 bg-[#BF3F3F] cursor-pointer mb-2 group-hover:bg-secondary">
+                            29
+                        </div>
+                        <span class="absolute hidden text-xs text-black bg-white px-2 py-2  rounded-tl-lg rounded-br-3xl group-hover:block z-10">Pertandingan Cabor</span>
+                    </div>
+                    <div class="md:mb-12 relative group">
+                        <div class="flex justify-center items-center text-[rgba(255, 255, 255, 0.54)]  w-[44px] h-[44px] rounded-tl-lg rounded-br-lg leading-2 bg-[#BF3F3F] cursor-pointer mb-2 group-hover:bg-secondary">
+                            30
+                        </div>
+                        <span class="absolute hidden text-xs text-black bg-white px-2 py-2  rounded-tl-lg rounded-br-3xl group-hover:block z-10">Pertandingan Cabor</span>
+                    </div>
+                    <div class="md:mb-12">
+                        <div class="flex justify-center items-center w-[44px] h-[44px] mb-2">
+                            1
+                        </div>
+                    </div>
+                    <div class="md:mb-12">
+                        <div class="flex justify-center items-center w-[44px] h-[44px] mb-2">
+                            2
+                        </div>
+                    </div>
+                    <div class="md:mb-12">
+                        <div class="flex justify-center items-center w-[44px] h-[44px] mb-2">
+                            3
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <a href="#" class="inline-block font-bold text-sm rounded-lg py-4 px-8 mt-8 text-[#FFFDFD] bg-[#BF3F3F] tracking-wider hover:opacity-70">SELENGKAPNYA</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Venue -->
+    <section id="venue">
+        <div class="lg:container">
+            <div class="pt-[52px] pb-16 bg-white">
+                <div class="w-full mx-auto text-center mb-8">
+                    <h1 class="font-spaceGrotest font-bold text-lg lg:text-5xl tracking-[0.425em] text-title mb-2">VENUE</h1>  
+                    <hr class="w-[130px] border-2 lg:w-[322px] 
+                    lg:border-4 border-[#3AAF5E] mx-auto">
+                </div>
+                <div class="flex flex-wrap justify-evenly lg:px-10">
+                    <div class="w-full px-4 lg:max-w-xl">
+                        <div class="bg-[#2ECC71] overflow-hidden mb-10">
+                            <img src="img/venue/venue_1.jpg" alt="venue" class="w-full hover:opacity-75 transition-all duration-300">
+                            <div class="pt-4 pb-2">
+                                <p class="font-spaceGrotest font-medium text-base leading-5 px-2 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap justify-evenly lg:lg:max-w-xl xl:max-w-md">
+                        <div class="w-full px-4 lg:w-1/2 xl:max-w-[200px]">
+                            <div class="bg-[#2ECC71] overflow-hidden mb-10">
+                                <img src="img/venue/venue_2.jpg" alt="venue" class="w-full hover:opacity-75 transition-all duration-300">
+                                <div class="py-2">
+                                    <p class="font-spaceGrotest font-medium text-base leading-5 px-2 text-white">Lorem ipsum dolor sit accusantium!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full px-4 lg:w-1/2 xl:max-w-[200px]">
+                            <div class="bg-[#2ECC71] overflow-hidden mb-10">
+                                <img src="img/venue/venue_3.jpg" alt="venue" class="w-full hover:opacity-75 transition-all duration-300">
+                                <div class="py-2">
+                                    <p class="font-spaceGrotest font-medium text-base leading-5 px-2 text-white">Lorem ipsum dolor sit accusantium!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full px-4 lg:w-1/2 xl:max-w-[200px]">
+                            <div class="bg-[#2ECC71] overflow-hidden mb-10">
+                                <img src="img/venue/venue_4.jpg" alt="venue" class="w-full hover:opacity-75 transition-all duration-300">
+                                <div class="py-2">
+                                    <p class="font-spaceGrotest font-medium text-base leading-5 px-2 text-white">Lorem ipsum dolor sit accusantium!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full px-4 lg:w-1/2 xl:max-w-[200px]">
+                            <div class="bg-[#2ECC71] overflow-hidden mb-10">
+                                <img src="img/venue/venue_5.jpg" alt="venue" class="w-full hover:opacity-75 transition-all duration-300">
+                                <div class="py-2">
+                                    <p class="font-spaceGrotest font-medium text-base leading-5 px-2 text-white">Lorem ipsum dolor sit accusantium!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->    
+    <footer class="font-roboto text-white">
+        <div class="lg:container">
+            <div class="relative bg-center bg-cover bg-no-repeat" style="background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('./img/footer.png')">
+                <div class="flex flex-wrap justify-center lg:justify-start lg:items-start py-8 px-8 lg:pl-16 xl:pl-24">
+                    <div class="w-full lg:max-w-[150px] mb-6 lg:mr-12">
+                        <img src="img/kuansing.png" alt="Kuansing" class="w-24 lg:w-full mx-auto lg:mx-0">
+                    </div>
+                    <div class="flex flex-wrap mb-4 lg:max-w-xl xl:max-w-[45rem]">
+                        <div class="w-full flex flex-wrap justify-center lg:justify-start mb-4 lg:mb-8">
+                            <span class="w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] mx-1"><a href="#"><img src="img/icon/youtube.png" alt="youtube"></a></span>
+                            <span class="w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] mx-1"><a href="#"><img src="img/icon/facebook.png" alt="youtube"></a></span>
+                            <span class="w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] mx-1"><a href="#"><img src="img/icon/instagram.png" alt="youtube"></a></span>
+                        </div>
+                        <div class="w-full text-center lg:text-left lg:pl-1">
+                            <h3 class="w-full font-bold text-xs lg:text-[22px]">PEMERINTAH KABUPATEN KUANSING</h3>
+                            <p class="w-full text-xs font-base lg:text-[16px] tracking-wide -mt-1 lg:mt-1">Kompleks Perkantoran Pemerintah Kabupaten Kuantan Singingi</p>
+                            <span class="block font-base text-xs lg:text-[16px] mt-1 lg:mt-2">Telp/Fax: 0760-12345</span>
+                            <span class="block font-base text-xs lg:text-[16px] lg:mt-2">Email: admin@kuansing.go.id</span>
+                            <hr class="border-1 lg:border-2 border-[#2ECC71] mt-4">
+                            <span class="block font-base text-xs lg:text-[16px] tracking-wide leading-1 lg:leading-5 mt-1">&copy; Copyright 2022 Porprov Kuansing. All Rights Reserved | Powered By Kominfoss Kuansing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script>
+        window.onscroll = function(){
+            const header = document.querySelector('header'); 
+            const fixedHeader = header.offsetTop;
+        
+            if(window.pageYOffset > fixedHeader){
+                header.classList.add('navbar-fixed');
+            }else{
+                header.classList.remove('navbar-fixed');
+            }
+        }
+
+        const hamburger = document.querySelector("#hamburger");
+        const navbar = document.querySelector("#navbar");
+
+        hamburger.addEventListener('click', function(){
+        hamburger.classList.toggle('hamburger-active');
+        navbar.classList.toggle('hidden');
+    });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            speed: 400,
+            spaceBetween: 100,
+            autoplay:{
+                delay: 3000,
+            },
+            // If we need pagination
+            pagination: {
+              el: '.swiper-pagination',
+            },
+          
+            // Navigation arrows
+            navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+            },
+          
+            // And if we need scrollbar
+            scrollbar: {
+              el: '.swiper-scrollbar',
+            },
+          });
+    </script>
+</body>
+</html>
